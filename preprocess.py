@@ -42,7 +42,7 @@ def prep_data(files, label, debug = False):
             if img is not None:
                 height, width = img.shape[:2]
                 if height == 224 and width == 224:
-                    prep = cv.cvtColor(img, cv.COLOR_BGR2GRAY).flatten()
+                    prep = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
                     data += [prep]
                 else:
                     if debug:
